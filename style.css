@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
 
 * {
     /* width not affected by padding or border */
@@ -6,9 +6,10 @@
 }
 
 body {
-    font-family: "Roboto", sans-serif;
+    font-family: "Roboto Mono", sans-serif;
+    background-color: #8e448d;
+    color: #fff;
     display: flex;
-    flex-direction: column;
     /* Centered horizontally */
     align-items: center; 
     /* Centered vertically on 100% viewport */
@@ -19,4 +20,29 @@ body {
     overflow: hidden;
     /* no margins  */
     margin: 0;
+}
+
+.counter-container {
+    display: flex;
+    /* vertical stack in container */
+    flex-direction: column;
+    /* vertical center */
+    justify-content: center;
+    /* 30px top,bottom | 50 sides */
+    margin: 30px 50px;
+    /* center text */
+    text-align: center;
+}
+
+.counter {
+    font-size: 60px;
+    margin-top: 10px;
+}
+
+/* If screen less than 650px wide  */
+@media(max-width: 650px) {
+    /* change body flex-direction to column  */
+    body {
+        flex-direction: column;
+    }
 }
